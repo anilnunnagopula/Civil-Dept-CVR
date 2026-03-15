@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext(null);
 
-const ADMIN_PASSWORD = 'civil@admin2024'; // ← change this to your desired password
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(
