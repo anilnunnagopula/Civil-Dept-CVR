@@ -1,4 +1,5 @@
 import { useCollection } from '../hooks/useCollection';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from '../components/SectionHeader';
 import PersonCard from '../components/PersonCard';
 import styles from './Alumni.module.css';
@@ -10,6 +11,10 @@ export default function Alumni() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>Alumni | Civil Engineering Department | CVR College</title>
+        <meta name="description" content="Connect with our global network of civil engineering alumni from CVR College of Engineering. Celebrating the success of our B.Tech and M.Tech graduates." />
+      </Helmet>
       <div className="container">
         <SectionHeader title="Alumni" subtitle="Our graduates who are making an impact around the world." />
         {loading && <div className="spinner" />}

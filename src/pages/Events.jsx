@@ -1,4 +1,5 @@
 import { useCollection } from '../hooks/useCollection';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from '../components/SectionHeader';
 import styles from './Events.module.css';
 
@@ -17,6 +18,10 @@ export default function Events() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>Events &amp; Fests | Civil Engineering Department | CVR College</title>
+        <meta name="description" content="Stay updated with the latest technical fests, workshops, seminars, and cultural events organized by the Civil Engineering Department at CVR College." />
+      </Helmet>
       <div className="container">
         <SectionHeader title="Events &amp; Fests" subtitle="Highlights from our vibrant academic and cultural calendar." />
         {loading && <div className="spinner" />}

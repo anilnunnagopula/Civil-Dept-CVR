@@ -12,6 +12,7 @@ import Events from './pages/Events.jsx';
 import Alumni from './pages/Alumni.jsx';
 import AdminLogin from './pages/AdminLogin.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 function PublicLayout({ children }) {
   return (
@@ -40,6 +41,9 @@ export default function App() {
       <Route path="/research" element={<PublicLayout><Research /></PublicLayout>} />
       <Route path="/events" element={<PublicLayout><Events /></PublicLayout>} />
       <Route path="/alumni" element={<PublicLayout><Alumni /></PublicLayout>} />
+      
+      {/* 404 Case */}
+      <Route path="*" element={<PublicLayout><NotFound /></PublicLayout>} />
     </Routes>
   );
 }

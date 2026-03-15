@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://civil-dept-cvr.web.app/sitemap.xml

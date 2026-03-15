@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCollection } from '../hooks/useCollection';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from '../components/SectionHeader';
 import styles from './Home.module.css';
 
@@ -62,6 +63,10 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Home | Civil Engineering Department | CVR College</title>
+        <meta name="description" content="Welcome to the Civil Engineering Department at CVR College of Engineering. Accredited by NBA (Tier-1), we provide excellence in technical education and research." />
+      </Helmet>
       {/* ── Hero ─────────────────────────────────────── */}
       <section className={styles.hero}>
         {/* animated background layers */}

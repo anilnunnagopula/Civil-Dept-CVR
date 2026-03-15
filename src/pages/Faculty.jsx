@@ -1,4 +1,5 @@
 import { useCollection } from '../hooks/useCollection';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from '../components/SectionHeader';
 import PersonCard from '../components/PersonCard';
 import styles from './Faculty.module.css';
@@ -16,6 +17,10 @@ export default function Faculty() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>Faculty | Civil Engineering Department | CVR College</title>
+        <meta name="description" content="Meet our highly qualified faculty members specializing in Structural, Geotechnical, Water Resources, and Transportation Engineering." />
+      </Helmet>
       <div className="container">
         <SectionHeader title="Faculty" subtitle="Meet the dedicated minds shaping the next generation of engineers." />
         {loading && <div className="spinner" />}

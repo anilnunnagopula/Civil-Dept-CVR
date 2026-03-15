@@ -1,4 +1,5 @@
 import { useCollection } from '../hooks/useCollection';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from '../components/SectionHeader';
 import styles from './Research.module.css';
 
@@ -10,6 +11,10 @@ export default function Research() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>Research | Civil Engineering Department | CVR College</title>
+        <meta name="description" content="Explore patents, publications, and scholarly contributions in structural, geotechnical, and transportation engineering by CVR Civil Engineering Department." />
+      </Helmet>
       <div className="container">
         <SectionHeader title="Research" subtitle="Patents, publications, and scholarly contributions by our faculty and students." />
 

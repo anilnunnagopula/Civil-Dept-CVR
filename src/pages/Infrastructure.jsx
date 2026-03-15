@@ -1,4 +1,5 @@
 import { useCollection } from '../hooks/useCollection';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from '../components/SectionHeader';
 import styles from './Infrastructure.module.css';
 
@@ -13,6 +14,10 @@ export default function Infrastructure() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>Infrastructure | Civil Engineering Department | CVR College</title>
+        <meta name="description" content="Explore our premium civil engineering laboratories, smart classrooms, and research facilities at CVR College of Engineering." />
+      </Helmet>
       <div className="container">
         <SectionHeader
           title="Infrastructure"

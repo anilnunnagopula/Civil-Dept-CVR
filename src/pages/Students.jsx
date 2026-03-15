@@ -1,4 +1,5 @@
 import { useCollection } from '../hooks/useCollection';
+import { Helmet } from 'react-helmet-async';
 import SectionHeader from '../components/SectionHeader';
 import styles from './Students.module.css';
 
@@ -7,6 +8,10 @@ export default function Students() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>Student Projects | Civil Engineering Department | CVR College</title>
+        <meta name="description" content="Discover outstanding civil engineering student projects and capstone works at CVR College of Engineering." />
+      </Helmet>
       <div className="container">
         <SectionHeader title="Best Projects" subtitle="Outstanding student projects and capstone works." />
         {loading && <div className="spinner" />}
