@@ -1,0 +1,45 @@
+.group { margin-bottom: 56px; }
+
+.groupHead {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+.facultyCard { padding: 20px; }
+
+.cardTop {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.fNameRow { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.fName { font-weight: 700; font-size: 0.97rem; color: var(--text); }
+.fRole { font-size: 0.82rem; font-weight: 600; color: var(--gold); margin-top: 2px; }
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.cardBody p { font-size: 0.84rem; color: var(--text2); line-height: 1.5; }
+
+.fl {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--navy);
+  margin-right: 6px;
+  min-width: 90px;
+}
+.fl::after { content: ':'; }
+
+.email { color: #2563eb; }
+.email:hover { text-decoration: underline; }

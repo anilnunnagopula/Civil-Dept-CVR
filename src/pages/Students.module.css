@@ -1,0 +1,83 @@
+.projCard {
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+}
+
+.leftPanel {
+  width: 56px;
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+  padding: 16px 0;
+}
+
+.year {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  letter-spacing: 0.06em;
+}
+
+.star { font-size: 1rem; }
+
+.body {
+  padding: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+}
+
+.desc {
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta p {
+  font-size: 0.84rem;
+  color: var(--text2);
+}
+
+.ml {
+  font-weight: 700;
+  color: var(--navy);
+  margin-right: 6px;
+}
+.ml::after { content: ':'; }
+
+.award {
+  font-size: 0.86rem !important;
+  font-weight: 600;
+  color: #b45309;
+  margin-top: 4px;
+}

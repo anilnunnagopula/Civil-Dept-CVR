@@ -1,0 +1,76 @@
+.page {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.3);
+}
+
+.logoWrap {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.sub {
+  font-size: 0.88rem;
+  color: var(--text2);
+  font-weight: 600;
+}
+
+.form { margin-bottom: 16px; }
+
+.error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.88rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.hint {
+  font-size: 0.78rem;
+  color: var(--gray);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.hint code {
+  background: var(--lgray);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.78rem;
+}

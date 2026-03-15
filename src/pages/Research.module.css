@@ -1,0 +1,97 @@
+.group { margin-bottom: 56px; }
+
+.groupHead {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+.patentCard { padding: 20px; }
+
+.patentHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.lockIcon { font-size: 1.4rem; flex-shrink: 0; padding-top: 2px; }
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.pTitle {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.pSub {
+  font-size: 0.84rem;
+  color: var(--text2);
+}
+
+.statusBadge {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.patentMeta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--gray);
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+.pubList { display: flex; flex-direction: column; gap: 16px; }
+
+.pubCard {
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+}
+
+.pubLeft {
+  width: 5px;
+  background: var(--navy);
+  flex-shrink: 0;
+}
+
+.pubBody { padding: 18px; flex: 1; }
+
+.authLine {
+  font-size: 0.85rem;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+
+.journalLine {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.doiLink {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+.doiLink:hover { text-decoration: underline; }

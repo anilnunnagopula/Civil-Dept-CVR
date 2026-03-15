@@ -1,0 +1,366 @@
+/* ── Hero ───────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  background: var(--navy);
+  color: var(--white);
+  padding: 108px 0 100px;
+  overflow: hidden;
+}
+
+/* dark textured base */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, #1e4080 0%, #0f2744 55%, #080e1e 100%);
+}
+
+/* subtle grid */
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+
+/* glow blobs */
+.gradientBlob1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,.13) 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+  pointer-events: none;
+}
+.gradientBlob2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(30,100,200,.15) 0%, transparent 70%);
+  bottom: -100px;
+  left: -60px;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* college pill */
+.collegePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 50px;
+  padding: 6px 18px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  backdrop-filter: blur(6px);
+}
+.collegeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+  box-shadow: 0 0 6px var(--gold);
+}
+
+.heroEyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.heroTitle {
+  font-size: clamp(2.8rem, 7vw, 4.8rem);
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.goldText {
+  color: var(--gold2);
+  position: relative;
+}
+.goldText::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 2px;
+}
+
+.heroSub {
+  max-width: 580px;
+  color: rgba(255,255,255,0.65);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+/* CTA buttons */
+.heroCta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+/* Accreditation badges */
+.badgeRow {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 10px;
+  padding: 10px 16px;
+  backdrop-filter: blur(4px);
+  transition: background 0.18s;
+}
+.badge:hover { background: rgba(255,255,255,0.11); }
+
+.badgeIcon { font-size: 1.3rem; }
+.badgeText {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+.badgeSub {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Stat boxes */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 820px;
+}
+
+.statBox {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 14px;
+  padding: 22px 12px 18px;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.statBox:hover { background: rgba(255,255,255,0.10); transform: translateY(-3px); }
+
+.statIcon { font-size: 1.4rem; margin-bottom: 2px; }
+.statVal {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: center;
+}
+
+/* Wave */
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  line-height: 0;
+}
+.wave svg { width: 100%; height: 60px; display: block; }
+
+/* ── Quick Links ──────────────────────────────────────── */
+.quickLinks {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+
+.qlGrid {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qlCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: var(--lgray);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: all 0.18s;
+}
+.qlCard:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(15,39,68,.18);
+}
+.qlIcon { font-size: 1.1rem; }
+
+/* ── Sections ─────────────────────────────────────────── */
+.section { padding-top: 64px; }
+
+/* Latest update cards */
+.updateCard { overflow: hidden; }
+.updateCardTop { height: 4px; background: var(--gold); }
+.updateBody { padding: 16px; }
+.updateTitle { font-size: 0.97rem; font-weight: 700; color: var(--text); margin: 6px 0 4px; }
+.updateSub { font-size: 0.82rem; color: var(--gold); font-weight: 600; }
+.updateDesc { font-size: 0.84rem; color: var(--text2); margin-top: 6px; line-height: 1.5; }
+
+/* Vision / Programs */
+.vpGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.vpCard { padding: 32px; }
+.vpTitle { font-size: 1.4rem; color: var(--navy); margin-bottom: 10px; }
+.vpDivider { width: 40px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 16px; }
+.vpText { font-size: 0.93rem; color: var(--text2); line-height: 1.7; }
+.programList { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.programList li { font-size: 0.93rem; color: var(--text2); font-weight: 600; }
+
+/* ── About CVR strip ──────────────────────────────────── */
+.aboutStrip {
+  background: var(--navy);
+  color: var(--white);
+  padding: 72px 0 80px;
+  margin-top: 24px;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.aboutEyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.aboutTitle {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.aboutDesc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+}
+
+.aboutStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.aboutStat {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 12px;
+  padding: 22px 16px;
+  text-align: center;
+}
+
+.aboutNum {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.aboutNum small {
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.aboutLabel {
+  font-size: 0.77rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .aboutGrid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 768px) {
+  .statGrid { grid-template-columns: repeat(2, 1fr); }
+  .vpGrid { grid-template-columns: 1fr; }
+  .badgeRow { gap: 8px; }
+  .badge { padding: 8px 12px; }
+  .heroCta { flex-direction: column; align-items: center; }
+  .hero { padding: 80px 0 90px; }
+}
+
+@media (max-width: 480px) {
+  .statGrid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .statVal { font-size: 1.5rem; }
+  .collegePill { font-size: 0.74rem; }
+  .aboutStats { grid-template-columns: 1fr 1fr; }
+}

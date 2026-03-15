@@ -1,0 +1,117 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--navy);
+  box-shadow: 0 2px 16px rgba(0,0,0,.25);
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deptName {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.link {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.link:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.active { color: var(--gold) !important; }
+
+.adminBtn { flex-shrink: 0; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.bar {
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  display: block;
+  transition: all 0.22s ease;
+}
+.barOpen1 { width: 22px; height: 2px; background: var(--gold); border-radius: 2px; display: block; transform: translateY(7px) rotate(45deg); }
+.barOpen2 { width: 22px; height: 2px; background: var(--gold); border-radius: 2px; display: block; opacity: 0; }
+.barOpen3 { width: 22px; height: 2px; background: var(--gold); border-radius: 2px; display: block; transform: translateY(-7px) rotate(-45deg); }
+
+.mobile {
+  background: var(--navy2);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.mLink {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: color 0.15s;
+}
+.mLink:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+.mActive { color: var(--gold) !important; }
+
+@media (max-width: 768px) {
+  .links { display: none; }
+  .adminBtn { display: none; }
+  .hamburger { display: flex; }
+  .deptName { font-size: 0.9rem; }
+}

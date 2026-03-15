@@ -1,0 +1,244 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--lgray);
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 220px;
+  background: var(--navy);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 16px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sLogo {
+  width: 38px;
+  height: 38px;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.3;
+}
+
+.sNav {
+  flex: 1;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sNavItem {
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.sNavItem:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.06);
+}
+
+.sNavActive {
+  border-left-color: var(--gold);
+  color: var(--gold) !important;
+  background: rgba(201,168,76,0.1);
+}
+
+.sFooter {
+  padding: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 28px 28px 64px;
+  max-width: 1000px;
+}
+
+/* ── Tab title ── */
+.tabTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+
+/* ── Overview stat grid ── */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.statCard {
+  padding: 18px;
+  border-top: 4px solid var(--gold);
+  text-align: center;
+}
+
+.statNum {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.statLbl {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray);
+}
+
+.recentTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+/* ── CRUD layout ── */
+.crudLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.formSection {
+  max-width: 560px;
+}
+
+.listSection { /* full width */ }
+
+.listTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+/* ── Seed banner ── */
+.seedBanner {
+  background: linear-gradient(135deg, #0f2744, #1a3a60);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.seedTitle {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.seedSub {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+/* ── Mobile ── */
+.mobileHeader {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobileTitle {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.97rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    height: 100%;
+    transition: left 0.25s ease;
+    z-index: 200;
+  }
+
+  .sidebarOpen {
+    left: 0;
+  }
+
+  .mobileHeader { display: flex; }
+  .content { padding: 20px 16px 64px; }
+}

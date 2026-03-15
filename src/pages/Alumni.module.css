@@ -1,0 +1,13 @@
+.group { margin-bottom: 56px; }
+
+.groupHead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}

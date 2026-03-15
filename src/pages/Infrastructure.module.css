@@ -1,0 +1,54 @@
+.group { margin-bottom: 48px; }
+
+.groupHeading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+.infraCard {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.iconWrap {
+  font-size: 2.2rem;
+  background: var(--lgray);
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.body { padding: 18px; flex: 1; }
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cap {
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 0.88rem;
+  color: var(--text2);
+  line-height: 1.6;
+}

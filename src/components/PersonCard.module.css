@@ -1,0 +1,53 @@
+.card { padding: 20px; }
+
+.top {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.info { flex: 1; min-width: 0; }
+
+.nameRow { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-bottom: 2px; }
+
+.name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+
+.detail {
+  font-size: 0.85rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.extra {
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-top: 2px;
+}
+
+.green {
+  font-size: 0.85rem;
+  color: #16a34a;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.linkedin {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2563eb;
+  transition: opacity 0.15s;
+}
+.linkedin:hover { opacity: 0.75; }
