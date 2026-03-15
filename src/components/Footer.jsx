@@ -37,9 +37,9 @@ export default function Footer() {
         <div className={styles.col}>
           <h4>Contact</h4>
           <p>Department of Civil Engineering</p>
-          <p>📍 Main Campus, Block C</p>
-          <p>📞 +91-XXX-XXXXXXX</p>
-          <p>✉ civil.dept@college.ac.in</p>
+          <p>📍 Vastunagar, Mangalpalli, Ibrahimpatnam, RR Dist, Telangana 501 510</p>
+          <p>📞 08414-661653</p>
+          <p>✉ hod.civil@cvr.ac.in</p>
         </div>
       </div>
       <div className={styles.copy}>

@@ -4,6 +4,10 @@ const AuthContext = createContext(null);
 
 const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
 
+if (!ADMIN_PASSWORD) {
+  console.warn("⚠️ VITE_ADMIN_PASSWORD is not defined in the environment variables!");
+}
+
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(
     () => sessionStorage.getItem('ce_admin') === 'true'

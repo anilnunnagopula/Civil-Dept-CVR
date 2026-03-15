@@ -46,11 +46,6 @@ export default function AdminLogin() {
             Login
           </button>
         </form>
-
-        <p className={styles.hint}>
-          Default password: <code>civil@admin2024</code><br />
-          Change it in <code>src/contexts/AuthContext.jsx</code>
-        </p>
       </div>
     </div>
   );
